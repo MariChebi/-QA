@@ -1,0 +1,5 @@
+mary@mary-VirtualBox:~$ free -h
+               total        used        free      shared  buff/cache   available
+Память:      1,9Gi       1,4Gi        63Mi        56Mi       474Mi       327Mi
+Подкачка:      2,6Gi       260Mi       2,4Gi
+

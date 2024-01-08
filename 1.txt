@@ -1,0 +1,62 @@
+mary@mary-VirtualBox:~$ sudo apt install openssh-server
+Чтение списков пакетов… Готово
+Построение дерева зависимостей… Готово
+Чтение информации о состоянии… Готово         
+Следующий пакет устанавливался автоматически и больше не требуется:
+  libwmf0.2-7
+Для его удаления используйте «sudo apt autoremove».
+Будут установлены следующие дополнительные пакеты:
+  ncurses-term openssh-sftp-server ssh-import-id
+Предлагаемые пакеты:
+  molly-guard monkeysphere ssh-askpass
+Следующие НОВЫЕ пакеты будут установлены:
+  ncurses-term openssh-server openssh-sftp-server ssh-import-id
+Обновлено 0 пакетов, установлено 4 новых пакетов, для удаления отмечено 0 пакетов, и 19 пакетов не обновлено.
+Необходимо скачать 752 kB архивов.
+После данной операции объём занятого дискового пространства возрастёт на 6 050 kB.
+Хотите продолжить? [Д/н] Д
+Пол:1 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 openssh-sftp-server amd64 1:8.9p1-3ubuntu0.5 [38,7 kB]
+Пол:2 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 openssh-server amd64 1:8.9p1-3ubuntu0.5 [435 kB]
+Пол:3 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 ncurses-term all 6.3-2ubuntu0.1 [267 kB]
+Пол:4 http://ru.archive.ubuntu.com/ubuntu jammy/main amd64 ssh-import-id all 5.11-0ubuntu1 [10,1 kB]
+Получено 752 kB за 2с (304 kB/s)    
+Предварительная настройка пакетов …
+Выбор ранее не выбранного пакета openssh-sftp-server.
+(Чтение базы данных … на данный момент установлено 348542 файла и каталога.)
+Подготовка к распаковке …/openssh-sftp-server_1%3a8.9p1-3ubuntu0.5_amd64.deb …
+Распаковывается openssh-sftp-server (1:8.9p1-3ubuntu0.5) …
+Выбор ранее не выбранного пакета openssh-server.
+Подготовка к распаковке …/openssh-server_1%3a8.9p1-3ubuntu0.5_amd64.deb …
+Распаковывается openssh-server (1:8.9p1-3ubuntu0.5) …
+Выбор ранее не выбранного пакета ncurses-term.
+Подготовка к распаковке …/ncurses-term_6.3-2ubuntu0.1_all.deb …
+Распаковывается ncurses-term (6.3-2ubuntu0.1) …
+Выбор ранее не выбранного пакета ssh-import-id.
+Подготовка к распаковке …/ssh-import-id_5.11-0ubuntu1_all.deb …
+Распаковывается ssh-import-id (5.11-0ubuntu1) …
+Настраивается пакет openssh-sftp-server (1:8.9p1-3ubuntu0.5) …
+Настраивается пакет openssh-server (1:8.9p1-3ubuntu0.5) …
+
+Creating config file /etc/ssh/sshd_config with new version
+Creating SSH2 RSA key; this may take some time ...
+3072 SHA256:k0gEdgWRPUpqOexnh8QCfhHxEps1e0UyiijZEKP0sf8 root@mary-VirtualBox (RSA)
+Creating SSH2 ECDSA key; this may take some time ...
+256 SHA256:sMs8EDANs0C5hgIKsf0ls1+m81PgfEN3sIE6Dqx4Urk root@mary-VirtualBox (ECDSA)
+Creating SSH2 ED25519 key; this may take some time ...
+256 SHA256:pevML7xPB7LewDHdsdIV+nHSYv/aoEOCQMItSt/xov8 root@mary-VirtualBox (ED25519)
+Created symlink /etc/systemd/system/sshd.service → /lib/systemd/system/ssh.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/ssh.service → /lib/systemd/system/ssh.service.
+rescue-ssh.target is a disabled or a static unit, not starting it.
+ssh.socket is a disabled or a static unit, not starting it.
+Настраивается пакет ssh-import-id (5.11-0ubuntu1) …
+Настраивается пакет ncurses-term (6.3-2ubuntu0.1) …
+Обрабатываются триггеры для man-db (2.10.2-1) …
+Обрабатываются триггеры для ufw (0.36.1-4ubuntu0.1) …
+mary@mary-VirtualBox:~$ sudo systemctl enable --now ssh
+[sudo] пароль для mary: 
+Попробуйте ещё раз.
+[sudo] пароль для mary: 
+Synchronizing state of ssh.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable ssh
+
+
